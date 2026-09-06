@@ -1,4 +1,4 @@
-export const database = {
+const database = {
     heroes: [
         {
             id: 1,
@@ -10,5 +10,21 @@ export const database = {
             name: "Hyperspeed",
             power: "Super speed"
         }
+    ],
+    villains: [
+        {
+            id: 1,
+            name: "Megladon",
+            power: "laser beams"
+        },
+        {
+            id: 2,
+            name: "The Joker",
+            power: "Mind control powers"
+        }
     ]
+}
+
+export const getVillains = () => {
+    return structuredClone(database.villains);
 }
